@@ -41,7 +41,7 @@ def main():
         for m in i:
             for n in i:
                 if m != n:
-                    small.add_edge(i[m], i[n])
+                    small.add_edge(m, n)
     print(list(small.nodes))
     print(list(small.edges))
     print(rowdy_small)
@@ -63,7 +63,7 @@ def main():
         for m in i:
             for n in i:
                 if m != n:
-                    medium.add_edge(i[m], i[n])
+                    medium.add_edge(m, n)
    # print(list(medium.nodes))
    # print(list(medium.edges))
     large_busnum = 25
@@ -84,7 +84,7 @@ def main():
         for m in i:
             for n in i:
                 if m != n:
-                    large.add_edge(i[m], i[n])
+                    large.add_edge(m, n)
     #nx.write_gml(small, input_small)
     #nx.write_gml(medium, input_medium)
     #nx.write_gml(large, input_large)
