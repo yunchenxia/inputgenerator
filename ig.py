@@ -82,11 +82,26 @@ def main():
             for n in i:
                 if m != n:
                     large.add_edge(m, n)
-    print(list(large.nodes))
-    print(list(large.edges))
-    #nx.write_gml(small, input_small)
-    #nx.write_gml(medium, input_medium)
-    #nx.write_gml(large, input_large)
+    #print(list(large.nodes))
+    #print(list(large.edges))
+    nx.write_gml(small, input_small)
+    nx.write_gml(medium, input_medium)
+    nx.write_gml(large, input_large)
+    sp = open("small_paramater", "w+")
+    sp.write(small_busnum + "/n")
+    sp.write(small_capacity + "/n")
+    for i in rowdy_small:
+        sp.write("{}".format(i))
+    mp = open("medium_paramater", "w+")
+    mp.write(medium_busnum + "/n")
+    mp.write(medium_capacity + "/n")
+    for i in rowdy_medium:
+        mp.write("{}".format(i))
+    lp = open("large_paramater", "w+")
+    lp.write(large_busnum + "/n")
+    lp.write(large_capacity + "/n")
+    for i in rowdy_large:
+        lp.write("{}".format(i))
 
 if __name__ == '__main__':
     main()
