@@ -37,10 +37,10 @@ def main():
                     small.add_node(curr_int)
         if(curr not in rowdy_small):
             rowdy_small.append(curr)
-            for i in range(0, len(curr)):
-                for j in range(0, len(curr)):
-                    if (i != j):
-                        small.add_edge(i,j)
+    for i in rowdy_small:
+        for m in range(0, len(i)):
+            for n in range(0, len(i)):
+                small.add_edge(m, n)
     print(list(small.nodes))
     print(list(small.edges))
     print(rowdy_small)
@@ -58,10 +58,10 @@ def main():
                     medium.add_node(curr_int)
         if(curr not in rowdy_medium):
             rowdy_medium.append(curr)
-            for i in range(0, len(curr)):
-                for j in range(0, len(curr)):
-                    if (i != j):
-                        medium.add_edge(i,j)
+    for i in rowdy_medium:
+        for m in range(0, len(i)):
+            for n in range(0, len(i)):
+                medium.add_edge(m, n)
    # print(list(medium.nodes))
    # print(list(medium.edges))
     large_busnum = 25
@@ -78,10 +78,10 @@ def main():
                     large.add_node(curr_int)
         if(curr not in rowdy_large):
             rowdy_large.append(curr)
-            for i in range(0, len(curr)):
-                for j in range(0, len(curr)):
-                    if (i != j):
-                        large.add_edge(i,j)
+    for i in rowdy_large:
+        for m in range(0, len(i)):
+            for n in range(0, len(i)):
+                large.add_edge(m, n)
     #nx.write_gml(small, input_small)
     #nx.write_gml(medium, input_medium)
     #nx.write_gml(large, input_large)
