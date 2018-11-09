@@ -38,8 +38,8 @@ def main():
         if(curr not in rowdy_small):
             rowdy_small.append(curr)
     for i in rowdy_small:
-        for m in range(0, len(i)):
-            for n in range(0, len(i)):
+        for m in i:
+            for n in i:
                 if m != n:
                     small.add_edge(i[m], i[n])
     print(list(small.nodes))
@@ -60,8 +60,8 @@ def main():
         if(curr not in rowdy_medium):
             rowdy_medium.append(curr)
     for i in rowdy_medium:
-        for m in range(0, len(i)):
-            for n in range(0, len(i)):
+        for m in i:
+            for n in i:
                 if m != n:
                     medium.add_edge(i[m], i[n])
    # print(list(medium.nodes))
@@ -81,8 +81,8 @@ def main():
         if(curr not in rowdy_large):
             rowdy_large.append(curr)
     for i in rowdy_large:
-        for m in range(0, len(i)):
-            for n in range(0, len(i)):
+        for m in i:
+            for n in i:
                 if m != n:
                     large.add_edge(i[m], i[n])
     #nx.write_gml(small, input_small)
