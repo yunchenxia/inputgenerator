@@ -28,7 +28,7 @@ def main():
     small_capacity = 5
     small = nx.Graph()
     while(len(rowdy_small) < 100):
-        curr = {}
+        curr = set()
         for i in range(0,4):
             curr_int = randint(0, 24)
             if(curr_int not in curr):
@@ -41,12 +41,15 @@ def main():
                 for j in range(0, len(curr)):
                     if (i != j):
                         small.add_edge(i,j)
+    print(list(small.nodes))
+    print(list(small.edges))
+    print(rowdy_small)
     medium_busnum = 25
     medium_capacity = 10
     medium = nx.Graph()
     rowdy_medium = []
     while(len(rowdy_medium) < 1000):
-        curr = {}
+        curr = set()
         for i in range(0,9):
             curr_int = randint(0, 249)
             if(curr_int not in curr):
@@ -59,12 +62,14 @@ def main():
                 for j in range(0, len(curr)):
                     if (i != j):
                         medium.add_edge(i,j)
+   # print(list(medium.nodes))
+   # print(list(medium.edges))
     large_busnum = 25
     large_capacity = 20
     large = nx.Graph()
     rowdy_large = []
     while(len(rowdy_medium) < 2000):
-        curr = {}
+        curr = set()
         for i in range(0,19):
             curr_int = randint(0, 499)
             if(curr_int not in curr):
