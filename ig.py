@@ -30,7 +30,7 @@ def main():
     while(len(rowdy_small) < 100):
         curr = set()
         for i in range(0,4):
-            curr_int = randint(0, 24)
+            curr_int = str(randint(0, 24))
             if(curr_int not in curr):
                 curr.add(curr_int)
                 if (curr_int not in list(small.nodes)):
@@ -49,7 +49,7 @@ def main():
     while(len(rowdy_medium) < 1000):
         curr = set()
         for i in range(0,9):
-            curr_int = randint(0, 249)
+            curr_int = str(randint(0, 249))
             if(curr_int not in curr):
                 curr.add(curr_int)
                 if (curr_int not in list(medium.nodes)):
@@ -70,7 +70,7 @@ def main():
     while(len(rowdy_large) < 2000):
         curr = set()
         for i in range(0,19):
-            curr_int = randint(0, 499)
+            curr_int = str(randint(0, 499))
             if(curr_int not in curr):
                 curr.add(curr_int)
                 if (curr_int not in list(large.nodes)):
